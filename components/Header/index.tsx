@@ -10,7 +10,7 @@ import User from "../Icons/User";
 
 export default function Header() {
   return (
-    <div className="sticky top-0 bg-white flex items-center justify-between px-8 py-2">
+    <div className="sticky top-0 bg-white dark:bg-gray-900 flex items-center justify-between px-8 py-2">
       <button>
         <Image src="/logoNew.png" alt="logo" width={100} height={30} />
       </button>
