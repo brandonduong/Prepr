@@ -7,8 +7,15 @@ import Help from "../Icons/Help";
 import Search from "./Search";
 import NavIcon from "./NavIcon";
 import User from "../Icons/User";
+import Moon from "../Icons/Moon";
 
-export default function Header() {
+export default function Header({
+  dark,
+  setDark,
+}: {
+  dark: boolean;
+  setDark: (dark: boolean) => void;
+}) {
   return (
     <div className="sticky top-0 bg-white dark:bg-gray-900 flex items-center justify-between px-8 py-2">
       <button>
@@ -42,6 +49,10 @@ export default function Header() {
 
       <NavIcon>
         <Bars />
+      </NavIcon>
+
+      <NavIcon onClick={() => setDark(!dark)}>
+        <Moon />
       </NavIcon>
     </div>
   );
