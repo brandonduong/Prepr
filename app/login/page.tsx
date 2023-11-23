@@ -2,16 +2,24 @@
 
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function Login() {
   return (
     <main>
       <section
         className={
-          "min-h-screen md:flex items-center justify-between py-24 px-24 md:px-64 bg-green-200"
+          "min-h-screen lg:flex items-center justify-between py-24 px-24 lg:px-64 bg-green-200"
         }
       >
-        <div className="basis-1/2">carousel</div>
+        <div className="basis-1/2">
+          <Image
+            src="/login/Splash_1.png"
+            alt="splash"
+            width={1000}
+            height={100}
+          />
+        </div>
         <div className="px-16 basis-1/2">
           <div className="bg-white text-center flex flex-col p-6">
             <div className="py-6 text-center m-auto">
@@ -29,13 +37,17 @@ export default function Home() {
             <div className="w-full text-end text-sm mb-6">
               <button>Forgot password?</button>
             </div>
-            <button className="w-full bg-orange-500 text-white p-2 mb-2">
-              Log in
-            </button>
+            <Link href={`/`}>
+              <button className="w-full bg-orange-500 text-white p-2 mb-2">
+                Log in
+              </button>
+            </Link>
             <h6 className="mb-2">or</h6>
-            <button className="w-full bg-blue-500 text-white p-2 mb-2">
-              Continue with Microsoft
-            </button>
+            <Link href={`/`}>
+              <button className="w-full bg-blue-500 text-white p-2 mb-2">
+                Continue with Microsoft
+              </button>
+            </Link>
             <button className="w-full bg-blue-500 text-white p-2 mb-2">
               Continue with LinkedIn
             </button>
@@ -50,7 +62,9 @@ export default function Home() {
             </button>
             <h6 className="w-full text-center text-sm">
               Don't have an account?{" "}
-              <button className="text-green-600">Sign up</button>
+              <Link href={`/register`}>
+                <button className="text-green-600">Sign up</button>
+              </Link>
             </h6>
           </div>
         </div>
