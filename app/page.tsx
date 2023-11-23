@@ -97,13 +97,22 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full ml-2">
-            <div className="flex rounded-lg border-2 border-gray-400 dark:border-gray-300 bg-gray-200 p-2">
-              <Search />
-              <button className="ml-2 px-2 py-1 bg-blue-400 rounded">
-                Search
-              </button>
+            <div className="flex justify-between items-center rounded-lg border-2 border-gray-400 dark:border-gray-300 bg-gray-200 p-2">
+              <div>
+                <Search />
+                <button className="ml-2 px-2 py-1 bg-blue-400 rounded">
+                  Search
+                </button>
+              </div>
+              <div>
+                <span className="mr-2">Sort by</span>
+                <select>
+                  <option value="Recently added">Recently added</option>
+                  <option value="Most popular">Most popular</option>
+                </select>
+              </div>
             </div>
-            test
+            <div>test</div>
           </div>
         </div>
       </section>
