@@ -27,6 +27,12 @@ export default function Home() {
   ];
 
   const tabs = ["labs", "challenges", "resources", "projects"];
+  const menus = {
+    labs: ["labs", "lab programs"],
+    challenges: ["challenges", "challenge paths"],
+    resources: ["resource modules", "resource collections", "resource groups"],
+    projects: [],
+  };
 
   return (
     <main className={clsx({ dark: dark })}>
@@ -91,8 +97,8 @@ export default function Home() {
       <section className="px-8 py-6 bg-gray-100 dark:bg-gray-400">
         <div className="flex">
           <div>
-            <Menu tabs={["labs", "lab programs"]} />
-            <div className="mt-2">
+            <Menu tabs={menus[tab as keyof typeof menus]} />
+            <div>
               <Filters />
             </div>
           </div>
@@ -112,7 +118,7 @@ export default function Home() {
                 </select>
               </div>
             </div>
-            <div>test</div>
+            <div>Projects</div>
           </div>
         </div>
       </section>
