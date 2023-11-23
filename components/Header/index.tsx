@@ -18,16 +18,18 @@ export default function Header({
 }) {
   return (
     <div className="sticky top-0 bg-white dark:bg-gray-900 flex items-center justify-between px-8 py-2">
-      <button>
-        <Image src="/logoNew.png" alt="logo" width={100} height={30} />
-      </button>
-      <div className="items-center hidden lg:flex">
-        <NavLink>Explore</NavLink>
-        <NavLink>Dashboard</NavLink>
-        <NavLink>My Challenges</NavLink>
-        <NavLink>My Labs</NavLink>
-        <NavLink>My Projects</NavLink>
-        <NavLink>Career Explorer</NavLink>
+      <div className="flex">
+        <button>
+          <Image src="/logoNew.png" alt="logo" width={100} height={30} />
+        </button>
+        <div className="ml-2 items-center hidden lg:flex">
+          <NavLink>Explore</NavLink>
+          <NavLink>Dashboard</NavLink>
+          <NavLink>My Challenges</NavLink>
+          <NavLink>My Labs</NavLink>
+          <NavLink>My Projects</NavLink>
+          <NavLink>Career Explorer</NavLink>
+        </div>
       </div>
       <div className="hidden lg:flex items-center">
         <NavIcon>
@@ -39,15 +41,11 @@ export default function Header({
         <NavIcon>
           <Help />
         </NavIcon>
-      </div>
-      <div className="hidden lg:flex items-center">
         <Search />
         <NavIcon>
           <User />
         </NavIcon>
-      </div>
 
-      <div className="whitespace-nowrap">
         <NavIcon onClick={() => setDark(!dark)}>
           <Moon />
         </NavIcon>

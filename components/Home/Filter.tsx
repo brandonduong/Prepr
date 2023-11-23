@@ -11,7 +11,7 @@ export default function Filter({
   const [expanded, setExpanded] = useState(false);
   return (
     <div>
-      <div className="bg-blue-400 mb-2 pl-2 text-white">
+      <div className="bg-blue-400 mb-2 px-2 text-white">
         <button className="capitalize" onClick={() => setExpanded(!expanded)}>
           {filter}
         </button>
