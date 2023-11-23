@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import Search from "@/components/Header/Search";
+import Card from "@/components/Home/Card";
 import Filters from "@/components/Home/Filters";
 import Interest from "@/components/Home/Interest";
 import Menu from "@/components/Home/Menu";
@@ -82,7 +83,7 @@ export default function Home() {
               className={clsx(
                 "w-1/4 p-4 capitalize font-black text-xl lg:text-4xl",
                 {
-                  "bg-blue-400": tab === t,
+                  "bg-blue-400 text-white": tab === t,
                 }
               )}
               onClick={() => setTab(t)}
@@ -106,7 +107,7 @@ export default function Home() {
             <div className="flex justify-between items-center rounded-lg border-2 border-gray-400 dark:border-gray-300 bg-gray-200 p-2">
               <div>
                 <Search />
-                <button className="ml-2 px-2 py-1 bg-blue-400 rounded">
+                <button className="ml-2 px-2 py-1 bg-blue-400 rounded text-white">
                   Search
                 </button>
               </div>
@@ -118,7 +119,9 @@ export default function Home() {
                 </select>
               </div>
             </div>
-            <div>Projects</div>
+            <div>
+              <Card tab={tab} />
+            </div>
           </div>
         </div>
       </section>

@@ -14,7 +14,7 @@ export default function Menu({ tabs }: { tabs: string[] }) {
       {tabs.map((t) => (
         <button
           className={clsx("p-4 capitalize font-black text-md lg:text-xl", {
-            "bg-blue-400": selected === t,
+            "bg-blue-400 text-white": selected === t,
           })}
           onClick={() => setSelected(t)}
           key={t}
