@@ -47,13 +47,14 @@ export default function Header({
         </NavIcon>
       </div>
 
-      <NavIcon>
-        <Bars />
-      </NavIcon>
-
-      <NavIcon onClick={() => setDark(!dark)}>
-        <Moon />
-      </NavIcon>
+      <div className="whitespace-nowrap">
+        <NavIcon onClick={() => setDark(!dark)}>
+          <Moon />
+        </NavIcon>
+        <NavIcon>
+          <Bars />
+        </NavIcon>
+      </div>
     </div>
   );
 }
