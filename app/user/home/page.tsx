@@ -5,6 +5,7 @@ import Project from "@/components/Dashboard/Project";
 import Header from "@/components/Header";
 import { useProjects } from "@/contexts/Projects";
 import clsx from "clsx";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Dashboard() {
@@ -67,9 +68,11 @@ export default function Dashboard() {
               <Card>
                 <div className="flex justify-between">
                   <h3 className="font-bold text-xl">Projects</h3>
-                  <button className="text-white bg-green-500 rounded px-2">
-                    Create
-                  </button>
+                  <Link href={"/createProject"}>
+                    <button className="text-white bg-green-500 rounded px-2">
+                      Create
+                    </button>
+                  </Link>
                 </div>
 
                 {projects.map((p) => (
