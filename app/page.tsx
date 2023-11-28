@@ -43,7 +43,7 @@ export default function Home() {
 
       <section
         className={
-          "flex flex-col items-center justify-between py-24 px-64 bg-gradient-to-r from-green-100 to-cyan-300 dark:from-green-500 dark:to-cyan-500"
+          "flex flex-col items-center justify-between py-24 px-8 md:px-64 bg-gradient-to-r from-green-100 to-cyan-300 dark:from-green-500 dark:to-cyan-500"
         }
       >
         <div className="dark:text-gray-200 text-center">
@@ -98,15 +98,15 @@ export default function Home() {
       </section>
 
       <section className="px-8 py-6 bg-gray-100 dark:bg-gray-400">
-        <div className="flex">
+        <div className="flex flex-col md:flex-row gap-2">
           <div>
             <Menu tabs={menus[tab as keyof typeof menus]} />
             <div>
               <Filters />
             </div>
           </div>
-          <div className="w-full ml-2">
-            <div className="flex justify-between items-center rounded-lg border-2 border-gray-400 dark:border-gray-300 bg-gray-200 p-2">
+          <div className="w-full">
+            <div className="flex flex-col md:flex-row justify-between items-center rounded-lg border-2 border-gray-400 dark:border-gray-300 bg-gray-200 p-2">
               <div>
                 <Search />
                 <button className="ml-2 px-2 py-1 bg-blue-400 rounded text-white">

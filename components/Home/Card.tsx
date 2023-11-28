@@ -4,7 +4,7 @@ import Share from "../Icons/Share";
 
 export default function Card({ tab }: { tab: string }) {
   return (
-    <div className="flex justify-between rounded-lg border-2 border-gray-400 dark:border-gray-300 bg-gray-200 p-2 mt-2">
+    <div className="flex flex-col overflow-auto md:flex-row justify-between rounded-lg border-2 border-gray-400 dark:border-gray-300 bg-gray-200 p-2 mt-2">
       <div>
         <Image src={"/logoNew.png"} width={250} height={100} alt="card" />
         <div className="flex py-2">
