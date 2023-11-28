@@ -1,5 +1,6 @@
 "use client";
 
+import Accessibility from "@/components/Accessibility";
 import Header from "@/components/Header";
 import Search from "@/components/Header/Search";
 import Card from "@/components/Home/Card";
@@ -38,6 +39,7 @@ export default function Home() {
   return (
     <main className={clsx({ dark: dark })}>
       <Header dark={dark} setDark={setDark} />
+      <Accessibility />
 
       <section
         className={
