@@ -24,66 +24,55 @@ export default function Dashboard() {
           Complete profile
         </button>
 
-        <div className="bg-white my-6 px-16 py-4 shadow-lg">
-          <div className="flex">
-            <div className="basis-1/3">
-              <Card>
-                <h3 className="font-bold text-xl">My Progress</h3>
-                <h5 className="text-sm py-6">
-                  You joined Preprlabs on Nov 13, 2023, here is your challenge
-                  journey.
-                </h5>
-                <ul>
-                  <li className="flex justify-between">
-                    <h6>Project Submitted:</h6> 0
-                  </li>
-                  <li className="flex justify-between">
-                    <h6>Project Created:</h6> {projects.length}
-                  </li>
-                  <li className="flex justify-between">
-                    <h6>Invited:</h6> 0
-                  </li>
-                  <li className="flex justify-between">
-                    <h6>Followed:</h6> 0
-                  </li>
-                </ul>
-              </Card>
-            </div>
-            <div className="basis-1/3 ml-2">
-              <Card>
-                <h3 className="font-bold text-xl">
-                  Continue Where You Left Off
-                </h3>
-                <h5 className="text-sm my-6">
-                  Start your PreprLabs journey now!
-                </h5>
-                <div className="text-center">
-                  <button className="text-white bg-green-500 rounded p-2">
-                    Explore more
+        <div className="bg-white my-6 px-4 md:px-16 py-4 shadow-lg">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+            <Card>
+              <h3 className="font-bold text-xl">My Progress</h3>
+              <h5 className="text-sm py-6">
+                You joined Preprlabs on Nov 13, 2023, here is your challenge
+                journey.
+              </h5>
+              <ul>
+                <li className="flex justify-between">
+                  <h6>Project Submitted:</h6> 0
+                </li>
+                <li className="flex justify-between">
+                  <h6>Project Created:</h6> {projects.length}
+                </li>
+                <li className="flex justify-between">
+                  <h6>Invited:</h6> 0
+                </li>
+                <li className="flex justify-between">
+                  <h6>Followed:</h6> 0
+                </li>
+              </ul>
+            </Card>
+            <Card>
+              <h3 className="font-bold text-xl">Continue Where You Left Off</h3>
+              <h5 className="text-sm my-6">
+                Start your PreprLabs journey now!
+              </h5>
+              <div className="text-center">
+                <button className="text-white bg-green-500 rounded p-2">
+                  Explore more
+                </button>
+              </div>
+            </Card>
+            <Card>
+              <div className="flex justify-between">
+                <h3 className="font-bold text-xl">Projects</h3>
+                <Link href={"/createProject"}>
+                  <button className="text-white bg-green-500 rounded px-2">
+                    Create
                   </button>
-                </div>
-              </Card>
-            </div>
-            <div className="basis-1/3 ml-2">
-              <Card>
-                <div className="flex justify-between">
-                  <h3 className="font-bold text-xl">Projects</h3>
-                  <Link href={"/createProject"}>
-                    <button className="text-white bg-green-500 rounded px-2">
-                      Create
-                    </button>
-                  </Link>
-                </div>
+                </Link>
+              </div>
 
-                {projects.map((p) => (
-                  <Project key={p.title} project={p} />
-                ))}
-              </Card>
-            </div>
-          </div>
-
-          <div className="flex mt-2">
-            <div className="basis-2/3">
+              {projects.map((p) => (
+                <Project key={p.title} project={p} />
+              ))}
+            </Card>
+            <div className="col-span-2">
               <Card>
                 <h3 className="font-bold text-xl">Leaderboard</h3>
                 <ol className="list-decimal ml-4">
@@ -95,24 +84,22 @@ export default function Dashboard() {
                 </ol>
               </Card>
             </div>
-            <div className="basis-1/3 ml-2">
-              <Card>
-                <div>
-                  <h3 className="font-bold text-xl">
-                    Upcoming Challenge Deadlines
-                  </h3>
-                </div>
+            <Card>
+              <div>
+                <h3 className="font-bold text-xl">
+                  Upcoming Challenge Deadlines
+                </h3>
+              </div>
 
-                {Array.from([1, 2, 3, 4, 5]).map((n) => (
-                  <div key={n} className="border-b-2">
-                    <b>test challenge {n}</b>
-                    <h6 className="text-gray-500 text-sm">
-                      Due November 30 at 12:10PM
-                    </h6>
-                  </div>
-                ))}
-              </Card>
-            </div>
+              {Array.from([1, 2, 3, 4, 5]).map((n) => (
+                <div key={n} className="border-b-2">
+                  <b>test challenge {n}</b>
+                  <h6 className="text-gray-500 text-sm">
+                    Due November 30 at 12:10PM
+                  </h6>
+                </div>
+              ))}
+            </Card>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ export default function Login() {
     <main>
       <section
         className={
-          "min-h-screen lg:flex items-center justify-between py-24 px-24 lg:px-64 bg-green-200"
+          "min-h-screen lg:flex items-center justify-between py-24 px-2 md:px-64 bg-green-200"
         }
       >
         <div className="basis-1/2">
@@ -20,7 +20,7 @@ export default function Login() {
             height={100}
           />
         </div>
-        <div className="px-16 basis-1/2">
+        <div className="px-0 md:px-16 basis-1/2">
           <div className="bg-white text-center flex flex-col p-6">
             <div className="py-6 text-center m-auto">
               <Image src="/logoNew.png" alt="logo" width={150} height={100} />
